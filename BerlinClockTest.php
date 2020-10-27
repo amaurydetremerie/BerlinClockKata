@@ -161,10 +161,10 @@ class BerlinClockTest extends TestCase
         $this->assertEquals("xxxx",$actual);
     }
 
-    public function test_simpleHour_given1hour_shouldReturn1y3x(){
+    public function test_simpleHour_given1hour_shouldReturn1r3x(){
         $actual = $this->simple_hour(1);
 
-        $this->assertEquals("yxxx",$actual);
+        $this->assertEquals("rxxx",$actual);
     }
 
 }
