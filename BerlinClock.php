@@ -49,7 +49,7 @@ class BerlinClock
 
     public function five_hours_converter(int $hours)
     {
-        return $this->simple_hour_converter($hours%5);
+        return $this->simple_hour_converter($hours/5);
     }
 
     public function hours_converter(int $hours){
