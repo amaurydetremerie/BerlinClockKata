@@ -149,4 +149,10 @@ class BerlinClockTest extends TestCase
 
         $this->assertEquals("yyryyryyryy\nyyyy",$actual);
     }
+
+    public function test_simpleHour_given0hour_shouldReturn4x(){
+        $actual = $this->berlinClock->simple_hour_converter(0);
+
+        $this->assertEquals("xxxx",$actual);
+    }
 }

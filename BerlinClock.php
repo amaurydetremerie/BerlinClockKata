@@ -34,4 +34,9 @@ class BerlinClock
         $five_minutes = $this->five_minutes_converter($minutes-($minutes%5));
         return $five_minutes."\n".$simple_minutes;
     }
+
+    public function simple_hour_converter(int $int)
+    {
+        return "xxxx";
+    }
 }
