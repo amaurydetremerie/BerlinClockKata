@@ -40,6 +40,11 @@ class BerlinClockTest extends TestCase
         return $this->berlinClock->five_hours_converter($hours);
     }
 
+    private function hours(int $hours): string
+    {
+        return $this->berlinClock->hours_converter($hours);
+    }
+
     public function test_simpleMinute_given0minute_shouldReturnxxxx() {
         $actual = $this->simple_minute(0);
 
@@ -185,14 +190,15 @@ class BerlinClockTest extends TestCase
     }
 
     public function test_hours_given0hour_shouldReturn4x_CR_4x(){
-        $actual=$this->berlinClock->hours_converter(0);
+        $actual=$this->hours(0);
 
         $this->assertEquals("xxxx\nxxxx",$actual);
     }
 
     public function test_hours_given1hour_shouldReturn4x_CR_1r3x(){
-        $actual=$this->berlinClock->hours_converter(1);
+        $actual = $this->hours(1);
 
         $this->assertEquals("xxxx\nrxxx",$actual);
     }
+
 }
