@@ -15,15 +15,21 @@ class BerlinClockTest extends TestCase
         $this->berlinClock = new BerlinClock();
     }
 
+    private function simple_minute(string $minute): string
+    {
+        return $this->berlinClock->minute_converter($minute);
+    }
+
     public function test_minutes_given0minute_shouldReturnxxxx() {
-        $actual = $this->berlinClock->minute_converter("00");
+        $actual = $this->simple_minute("00");
 
         $this->assertEquals("xxxx", $actual);
     }
 
     public function test_minutes_given1minute_shouldReturnyxxx() {
-        $actual = $this->berlinClock->minute_converter("01");
+        $actual = $this->simple_minute("01");
 
         $this->assertEquals("yxxx", $actual);
     }
+
 }
