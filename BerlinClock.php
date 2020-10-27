@@ -3,15 +3,15 @@
 
 class BerlinClock
 {
-    public function minute_converter(string $minutes):string
+    public function minute_converter(int $minutes):string
     {
-        if($minutes == "04")
+        if($minutes == 4)
             return "yyyy";
-        if($minutes == "03")
+        if($minutes == 3)
             return "yyyx";
-        if($minutes == "02")
+        if($minutes == 2)
             return "yyxx";
-        if($minutes == "01")
+        if($minutes == 1)
             return "yxxx";
         return "xxxx";
     }
