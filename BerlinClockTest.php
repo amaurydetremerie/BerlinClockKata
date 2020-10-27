@@ -90,4 +90,10 @@ class BerlinClockTest extends TestCase
 
         $this->assertEquals("yyryyxxxxxx",$actual);
     }
+
+    public function test_5minute_given30minute_shouldReturn2y1r2y1r5x(){
+        $actual = $this->five_minutes(30);
+
+        $this->assertEquals("yyryyrxxxxx",$actual);
+    }
 }
