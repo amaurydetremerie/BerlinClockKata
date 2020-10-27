@@ -30,31 +30,31 @@ class BerlinClockTest extends TestCase
         return $this->berlinClock->minutes_converter($minutes);
     }
 
-    public function test_minute_given0minute_shouldReturnxxxx() {
+    public function test_simpleMinute_given0minute_shouldReturnxxxx() {
         $actual = $this->simple_minute(0);
 
         $this->assertEquals("xxxx", $actual);
     }
 
-    public function test_minute_given1minute_shouldReturnyxxx() {
+    public function test_simpleMinute_given1minute_shouldReturnyxxx() {
         $actual = $this->simple_minute(1);
 
         $this->assertEquals("yxxx", $actual);
     }
 
-    public function test_minute_given2minutes_shouldReturnyyxx() {
+    public function test_simpleMinute_given2minutes_shouldReturnyyxx() {
         $actual = $this->simple_minute(2);
 
         $this->assertEquals("yyxx", $actual);
     }
 
-    public function test_minute_given3minutes_shouldReturnyyyx() {
+    public function test_simpleMinute_given3minutes_shouldReturnyyyx() {
         $actual = $this->simple_minute(3);
 
         $this->assertEquals("yyyx", $actual);
     }
 
-    public function test_minute_given4minutes_shouldReturnyyyy() {
+    public function test_simpleMinute_given4minutes_shouldReturnyyyy() {
         $actual = $this->simple_minute(4);
 
         $this->assertEquals("yyyy", $actual);
@@ -149,5 +149,4 @@ class BerlinClockTest extends TestCase
 
         $this->assertEquals("yyryyryyryy\nyyyy",$actual);
     }
-
 }
