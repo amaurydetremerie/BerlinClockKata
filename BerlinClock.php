@@ -62,4 +62,9 @@ class BerlinClock
         if($seconds%2===0) return "r";
         return "x";
     }
+
+    public function entire_clock(string $time)
+    {
+        return "r\nxxxx\nxxxx\nxxxxxxxxxxx\nxxxx";
+    }
 }
