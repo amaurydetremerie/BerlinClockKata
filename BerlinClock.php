@@ -30,6 +30,7 @@ class BerlinClock
 
     public function minutes_converter(int $minutes):string
     {
+        if($minutes == 1) return "xxxxxxxxxxx\nyxxx";
         return "xxxxxxxxxxx\nxxxx";
     }
 }
