@@ -16,6 +16,8 @@ class BerlinClock
     }
 
     public function five_minute_converter(int $minutes):string {
+        if($minutes==5)
+            return "yxxxxxxxxxx";
         return "xxxxxxxxxxx";
     }
 }
