@@ -37,7 +37,13 @@ class BerlinClock
 
     public function simple_hour_converter(int $hour)
     {
-        if($hour == 1) return "rxxx";
-        return "xxxx";
+        $tmp="";
+        for($i=0;$i<$hour;$i++){
+            $tmp.="r";
+        }
+        while(strlen($tmp)<4){
+            $tmp .= "x";
+        }
+        return $tmp;
     }
 }
