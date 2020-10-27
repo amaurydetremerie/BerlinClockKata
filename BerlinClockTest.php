@@ -32,4 +32,10 @@ class BerlinClockTest extends TestCase
         $this->assertEquals("yxxx", $actual);
     }
 
+    public function test_minutes_given2minute_shouldReturnyyxx() {
+        $actual = $this->simple_minute("02");
+
+        $this->assertEquals("yyxx", $actual);
+    }
+
 }
