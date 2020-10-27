@@ -15,7 +15,7 @@ class BerlinClock
         return $tmp;
     }
 
-    public function five_minute_converter(int $minutes):string {
+    public function five_minutes_converter(int $minutes):string {
         $tmp="";
         for($i=5;$i<=$minutes;$i+=5){
             if($i%15===0) $tmp.="r";
