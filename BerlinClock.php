@@ -53,6 +53,7 @@ class BerlinClock
     }
 
     public function hours_converter(int $hours){
+        if($hours==1) return "xxxx\nrxxx";
         return "xxxx\nxxxx";
     }
 }
