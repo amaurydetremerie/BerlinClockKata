@@ -17,7 +17,7 @@ class BerlinClockTest extends TestCase
 
     private function simple_minute(int $minute): string
     {
-        return $this->berlinClock->minute_converter($minute);
+        return $this->berlinClock->simple_minute_converter($minute);
     }
 
     public function test_minutes_given0minute_shouldReturnxxxx() {

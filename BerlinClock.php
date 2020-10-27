@@ -3,7 +3,7 @@
 
 class BerlinClock
 {
-    public function minute_converter(int $minutes):string
+    public function simple_minute_converter(int $minutes):string
     {
         $tmp="";
         for($i=0;$i<$minutes;$i++){
