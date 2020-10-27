@@ -5,14 +5,13 @@ class BerlinClock
 {
     public function minute_converter(int $minutes):string
     {
-        if($minutes == 4)
-            return "yyyy";
-        if($minutes == 3)
-            return "yyyx";
-        if($minutes == 2)
-            return "yyxx";
-        if($minutes == 1)
-            return "yxxx";
-        return "xxxx";
+        $tmp="";
+        for($i=0;$i<$minutes;$i++){
+            $tmp.="y";
+        }
+        while(strlen($tmp)<4){
+            $tmp .= "x";
+        }
+        return $tmp;
     }
 }
