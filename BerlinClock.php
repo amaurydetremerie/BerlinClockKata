@@ -47,7 +47,7 @@ class BerlinClock
         return $tmp;
     }
 
-    public function five_hours(int $int)
+    public function five_hours_converter(int $hours)
     {
         return "xxxx";
     }
