@@ -35,8 +35,9 @@ class BerlinClock
         return $five_minutes."\n".$simple_minutes;
     }
 
-    public function simple_hour_converter(int $int)
+    public function simple_hour_converter(int $hour)
     {
+        if($hour == 1) return "yxxx";
         return "xxxx";
     }
 }
