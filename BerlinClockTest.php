@@ -7,18 +7,22 @@ use PHPUnit\Framework\TestCase;
 
 class BerlinClockTest extends TestCase
 {
-    public function test_minutes_given0minute_shouldReturnxxxx() {
-        $berlinClock = new BerlinClock();
+    private $berlinClock;
 
-        $actual = $berlinClock->minute_converter("00");
+    protected function setUp(): void
+    {
+        parent::setUp();
+        $this->berlinClock = new BerlinClock();
+    }
+
+    public function test_minutes_given0minute_shouldReturnxxxx() {
+        $actual = $this->berlinClock->minute_converter("00");
 
         $this->assertEquals("xxxx", $actual);
     }
 
     public function test_minutes_given1minute_shouldReturnyxxx() {
-        $berlinClock = new BerlinClock();
-
-        $actual = $berlinClock->minute_converter("01");
+        $actual = $this->berlinClock->minute_converter("01");
 
         $this->assertEquals("yxxx", $actual);
     }
