@@ -50,6 +50,11 @@ class BerlinClockTest extends TestCase
         return $this->berlinClock->seconds_converter($seconds);
     }
 
+    private function entire_clock(string $time): string
+    {
+        return $this->berlinClock->entire_clock($time);
+    }
+
     public function test_simpleMinute_given0minute_shouldReturnxxxx() {
         $actual = $this->simple_minute(0);
 
@@ -225,7 +230,7 @@ class BerlinClockTest extends TestCase
     }
 
     public function test_entire_clock_given00_00_00_shouldReturn1r_CR_4x_CR_4x_CR_11x_CR_4x(){
-        $actual = $this->berlinClock->entire_clock("00-00-00");
+        $actual = $this->entire_clock("00-00-00");
 
         $this->assertEquals("r\nxxxx\nxxxx\nxxxxxxxxxxx\nxxxx",$actual);
     }
