@@ -53,7 +53,8 @@ class BerlinClock
     }
 
     public function hours_converter(int $hours){
-        if($hours==1) return "xxxx\nrxxx";
-        return "xxxx\nxxxx";
+        $simple_hour=$this->simple_hour_converter($hours%5);
+        $five_hours=$this->five_hours_converter($hours-($hours%5));
+        return $five_hours."\n".$simple_hour;
     }
 }
