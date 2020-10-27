@@ -51,4 +51,8 @@ class BerlinClock
     {
         return $this->simple_hour_converter($hours%5);
     }
+
+    public function hours_converter(int $hours){
+        return "xxxx\nxxxx";
+    }
 }
