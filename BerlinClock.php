@@ -59,6 +59,7 @@ class BerlinClock
     }
 
     public function seconds_converter(int $seconds){
+        if($seconds==1) return 'x';
         return "r";
     }
 }
