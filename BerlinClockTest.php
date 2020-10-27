@@ -50,6 +50,11 @@ class BerlinClockTest extends TestCase
         $this->assertEquals("yyyy", $actual);
     }
 
+    public function test_5minute_given0minute_shouldReturn11x(){
+        $actual=$this->berlinClock->five_minute_converter(0);
+
+        $this->assertEquals("xxxxxxxxxxx",$actual);
+    }
 
 
 }

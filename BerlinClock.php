@@ -14,4 +14,8 @@ class BerlinClock
         }
         return $tmp;
     }
+
+    public function five_minute_converter(int $minutes):string {
+        return "xxxxxxxxxxx";
+    }
 }
