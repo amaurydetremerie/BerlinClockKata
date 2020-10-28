@@ -266,4 +266,12 @@ class BerlinClockTest extends TestCase
         $this->assertEquals("00-00-00", $actual);
     }
 
+    public function test_date_converter_givenNoon_shouldReturn12_00_00(){
+        $timestamp = mktime("12","00","00");
+
+        $actual = $this->date($timestamp);
+
+        $this->assertEquals("12-00-00", $actual);
+    }
+
 }

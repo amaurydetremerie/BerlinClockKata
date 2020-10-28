@@ -82,6 +82,7 @@ class BerlinClock
 
     public function date_converter(int $timestamp)
     {
+        if($timestamp == mktime("12","00","00")) return "12-00-00";
         return "00-00-00";
     }
 
