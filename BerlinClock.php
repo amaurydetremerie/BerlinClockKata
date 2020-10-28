@@ -68,7 +68,6 @@ class BerlinClock
         $seconds = substr($time,-2);
         $seconds = intval($seconds);
         $seconds = $this->seconds_converter($seconds);
-        if($time == "00-00-01") return $seconds."\nxxxx\nxxxx\nxxxxxxxxxxx\nxxxx";
         return $seconds."\nxxxx\nxxxx\nxxxxxxxxxxx\nxxxx";
     }
 }

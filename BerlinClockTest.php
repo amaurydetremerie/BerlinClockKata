@@ -241,4 +241,6 @@ class BerlinClockTest extends TestCase
         $this->assertEquals("x\nxxxx\nxxxx\nxxxxxxxxxxx\nxxxx",$actual);
     }
 
+
+
 }
