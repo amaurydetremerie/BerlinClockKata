@@ -79,4 +79,9 @@ class BerlinClock
 
         return $seconds."\n".$hours."\n".$minutes;
     }
+
+    public function date_converter(DateTime $date):string
+    {
+        return "00-00-00";
+    }
 }

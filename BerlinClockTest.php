@@ -253,4 +253,12 @@ class BerlinClockTest extends TestCase
         $this->assertEquals("r\nxxxx\nrxxx\nxxxxxxxxxxx\nxxxx",$actual);
     }
 
+    public function test_date_converter_givenMidnight_shouldReturn00_00_00(){
+        $date = new DateTime("2001-01-01T00:00:00");
+
+        $actual = $this->berlinClock->date_converter($date);
+
+        $this->assertEquals("00-00-00",$actual);
+    }
+
 }
