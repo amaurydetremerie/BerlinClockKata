@@ -247,4 +247,10 @@ class BerlinClockTest extends TestCase
         $this->assertEquals("r\nxxxx\nxxxx\nxxxxxxxxxxx\nyxxx",$actual);
     }
 
+    public function test_entire_clock_given01_00_00_shouldReturn1r_CR_4x_CR_1r3x_CR_11x_CR_4x(){
+        $actual = $this->entire_clock("01-00-00");
+
+        $this->assertEquals("r\nxxxx\nrxxx\nxxxxxxxxxxx\nxxxx",$actual);
+    }
+
 }

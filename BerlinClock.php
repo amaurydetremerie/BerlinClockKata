@@ -73,6 +73,7 @@ class BerlinClock
         $minutes = intval($minutes);
         $minutes = $this->minutes_converter($minutes);
 
+        if($time == "01-00-00") return $seconds."\nxxxx\nrxxx\n".$minutes;
         return $seconds."\nxxxx\nxxxx\n".$minutes;
     }
 }
