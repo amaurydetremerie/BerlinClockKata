@@ -86,5 +86,11 @@ class BerlinClock
         return $time;
     }
 
+    public function berlin_clock(int $timestamp):string{
+        $time = $this->date_converter($timestamp);
+        $time = $this->entire_clock($time);
+        return $time;
+    }
+
 
 }
