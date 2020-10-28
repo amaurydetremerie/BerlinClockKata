@@ -80,5 +80,10 @@ class BerlinClock
         return $seconds."\n".$hours."\n".$minutes;
     }
 
+    public function date_converter(int $timestamp)
+    {
+        return "00-00-00";
+    }
+
 
 }
