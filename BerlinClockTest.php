@@ -55,6 +55,11 @@ class BerlinClockTest extends TestCase
         return $this->berlinClock->entire_clock($time);
     }
 
+    private function date(int $timestamp): string
+    {
+        return $this->berlinClock->date_converter($timestamp);
+    }
+
     public function test_simpleMinute_given0minute_shouldReturnxxxx() {
         $actual = $this->simple_minute(0);
 
@@ -256,8 +261,9 @@ class BerlinClockTest extends TestCase
     public function test_date_converter_givenMidnight_shouldReturn00_00_00(){
         $timestamp = mktime("00","00","00");
 
-        $actual = $this->berlinClock->date_converter($timestamp);
+        $actual = $this->date($timestamp);
 
         $this->assertEquals("00-00-00", $actual);
     }
+
 }
