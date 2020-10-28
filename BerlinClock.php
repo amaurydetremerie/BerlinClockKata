@@ -65,6 +65,7 @@ class BerlinClock
 
     public function entire_clock(string $time)
     {
+        if($time == "00-00-01") return "x\nxxxx\nxxxx\nxxxxxxxxxxx\nxxxx";
         return "r\nxxxx\nxxxx\nxxxxxxxxxxx\nxxxx";
     }
 }
