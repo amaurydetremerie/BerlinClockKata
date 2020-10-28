@@ -35,7 +35,7 @@ class BerlinClock
         return $five_minutes."\n".$simple_minutes;
     }
 
-    public function simple_hour_converter(int $hour)
+    public function simple_hour_converter(int $hour):string
     {
         $tmp="";
         for($i=0;$i<$hour;$i++){
@@ -47,23 +47,25 @@ class BerlinClock
         return $tmp;
     }
 
-    public function five_hours_converter(int $hours)
+    public function five_hours_converter(int $hours):string
     {
         return $this->simple_hour_converter($hours/5);
     }
 
-    public function hours_converter(int $hours){
+    public function hours_converter(int $hours):string
+    {
         $simple_hour=$this->simple_hour_converter($hours%5);
         $five_hours=$this->five_hours_converter($hours-($hours%5));
         return $five_hours."\n".$simple_hour;
     }
 
-    public function seconds_converter(int $seconds){
+    public function seconds_converter(int $seconds):string
+    {
         if($seconds%2===0) return "r";
         return "x";
     }
 
-    public function entire_clock(string $time)
+    public function entire_clock(string $time):string
     {
         $seconds = substr($time,-2);
         $seconds = intval($seconds);
@@ -80,13 +82,14 @@ class BerlinClock
         return $seconds."\n".$hours."\n".$minutes;
     }
 
-    public function date_converter(int $timestamp)
+    public function date_converter(int $timestamp):string
     {
         $time = date("H-i-s", $timestamp);
         return $time;
     }
 
-    public function berlin_clock(int $timestamp):string{
+    public function berlin_clock(int $timestamp):string
+    {
         $time = $this->date_converter($timestamp);
         $time = $this->entire_clock($time);
         return $time;
