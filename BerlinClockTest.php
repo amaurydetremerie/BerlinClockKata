@@ -60,9 +60,9 @@ class BerlinClockTest extends TestCase
         return $this->berlinClock->date_converter($timestamp);
     }
 
-    private function time_seconds(int $timestamp): string
+    private function time_seconds(string $time): string
     {
-        return $this->berlinClock->time_to_seconds($timestamp);
+        return $this->berlinClock->time_to_seconds($time);
     }
 
     private function time_minutes(string $time): string
@@ -320,17 +320,13 @@ class BerlinClockTest extends TestCase
     }
 
     public function test_time_to_second_given00_shouldReturn_r(){
-        $timestamp = mktime("00","00","00");
-
-        $actual = $this->time_seconds($timestamp);
+        $actual = $this->time_seconds("00-00-00");
 
         $this->assertEquals("r", $actual);
     }
 
     public function test_time_to_second_given01_shouldReturn_x(){
-        $timestamp = mktime("00","00","01");
-
-        $actual = $this->time_seconds($timestamp);
+        $actual = $this->time_seconds("00-00-01");
 
         $this->assertEquals("x", $actual);
     }
