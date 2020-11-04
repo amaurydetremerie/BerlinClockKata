@@ -309,4 +309,11 @@ class BerlinClockTest extends TestCase
         $this->assertEquals("12-00-00", $actual);
     }
 
+    public function test_time_to_second_given00_shouldReturn_r(){
+        $timestamp = mktime("00","00","00");
+
+        $actual = $this->berlinClock->time_to_seconds($timestamp);
+
+        $this->assertEquals("r", $actual);
+    }
 }
