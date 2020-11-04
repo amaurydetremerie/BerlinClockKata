@@ -67,9 +67,7 @@ class BerlinClock
 
     public function entire_clock(string $time):string
     {
-        $seconds = substr($time,-2);
-        $seconds = intval($seconds);
-        $seconds = $this->seconds_converter($seconds);
+        $seconds = $this->time_to_seconds($time);
 
         $minutes = substr($time,3,2);
         $minutes = intval($minutes);
@@ -93,6 +91,15 @@ class BerlinClock
         $time = $this->date_converter($timestamp);
         $time = $this->entire_clock($time);
         return $time;
+    }
+
+
+    public function time_to_seconds(string $time): string
+    {
+        $seconds = substr($time, -2);
+        $seconds = intval($seconds);
+        $seconds = $this->seconds_converter($seconds);
+        return $seconds;
     }
 
 
