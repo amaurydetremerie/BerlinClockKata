@@ -69,9 +69,7 @@ class BerlinClock
     {
         $seconds = $this->time_to_seconds($time);
 
-        $minutes = substr($time,3,2);
-        $minutes = intval($minutes);
-        $minutes = $this->minutes_converter($minutes);
+        $minutes = $this->time_to_minutes($time);
 
         $hours = substr($time,0,2);
         $hours = intval($hours);
@@ -100,6 +98,14 @@ class BerlinClock
         $seconds = intval($seconds);
         $seconds = $this->seconds_converter($seconds);
         return $seconds;
+    }
+
+    public function time_to_minutes(string $time): string
+    {
+        $minutes = substr($time, 3, 2);
+        $minutes = intval($minutes);
+        $minutes = $this->minutes_converter($minutes);
+        return $minutes;
     }
 
 
