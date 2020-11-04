@@ -341,4 +341,10 @@ class BerlinClockTest extends TestCase
         $this->assertEquals("xxxxxxxxxxx\nxxxx", $actual);
     }
 
+    public function test_time_to_minute_given59_shouldReturn_2y1r2y1r2y1r2y_CR_4y(){
+        $actual = $this->time_minutes("00-59-00");
+
+        $this->assertEquals("yyryyryyryy\nyyyy", $actual);
+    }
+
 }
