@@ -70,6 +70,11 @@ class BerlinClockTest extends TestCase
         return $this->berlinClock->time_to_minutes($time);
     }
 
+    private function time_hour(string $time): string
+    {
+        return $this->berlinClock->time_to_hours($time);
+    }
+
     public function test_simpleMinute_given0minute_shouldReturnxxxx()
     {
         $actual = $this->simple_minute(0);
@@ -344,7 +349,7 @@ class BerlinClockTest extends TestCase
     }
 
     public function test_time_to_hours_given00_shouldReturn_4x_CR_4x(){
-        $actual = $this->berlinClock->time_to_hours("00-00-00");
+        $actual = $this->time_hour("00-00-00");
 
         $this->assertEquals("xxxx\nxxxx", $actual);
     }
